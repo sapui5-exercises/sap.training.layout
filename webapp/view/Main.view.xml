@@ -1,0 +1,90 @@
+<mvc:View controllerName="sap.training.controller.Main" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<l:ResponsiveFlowLayout>
+		<l:content>
+			<Panel headerText="Panel mit SimpleForm" width="100%">
+				<layoutData>
+					<l:ResponsiveFlowLayoutData minWidth="300"/>
+				</layoutData>
+				<content>
+					<f:SimpleForm layout="ResponsiveLayout">
+						<f:content>
+							<core:Title text="Schlüssel der Flugverbindung"/>
+							<Label text="Fluggesellschaft"/>
+							<Input/>
+							<Label text="Flugnummer"/>
+							<Input/>
+						</f:content>
+						<f:title>
+							<core:Title text="SimpleForm mit ResponsiveLayout"/>
+						</f:title>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+			<Panel headerText="Panel mit Form" width="100%">
+				<layoutData>
+					<l:ResponsiveFlowLayoutData minWidth="300" weight="2"/>
+				</layoutData>
+				<content>
+					<f:Form >
+						<f:formContainers>
+							<f:FormContainer>
+								<f:formElements>
+									<f:FormElement>
+										<f:label>
+											<Label text="Fluggesellschaft"/>
+										</f:label>
+										<f:fields>
+											<Input/>
+										</f:fields>
+										<Image src="img/airplane.png">
+											<layoutData>
+												<f:GridElementData vCells="2"/>
+											</layoutData>
+										</Image>
+									</f:FormElement>
+									<f:FormElement>
+										<f:label>
+											<Label text="Flugnummer"/>
+										</f:label>
+										<f:fields>
+											<Input/>
+										</f:fields>
+									</f:FormElement>
+								</f:formElements>
+								<f:title>
+									<core:Title text="Schlüssel der Flugverbindung"/>
+								</f:title>
+							</f:FormContainer>
+						</f:formContainers>
+						<f:title>
+							<core:Title text="Form mit GridLayout"/></f:title>
+						<f:layout>
+							<f:GridLayout/>
+						</f:layout>
+					</f:Form>
+				</content>
+			</Panel>
+			<Panel headerText="Panel mit Grid" width="100%">
+				<layoutData>
+					<l:ResponsiveFlowLayoutData minWidth="300"/>
+				</layoutData>
+				<content>
+					<l:Grid >
+						<l:content>
+							<Label labelFor="idCarrier" text="Fluggesellschaft:"/>
+							<Input id="idCarrier"/>
+							<Label labelFor="idConnId" text="Flugnummer:"/>
+							<Input id="idConnId"/>
+							<Image src="img/airplane.png" width="100%">
+								<layoutData>
+									<l:GridData linebreak="true" span="L12 M12" visibleS="false"/>
+								</layoutData>
+							</Image>
+						</l:content>
+					</l:Grid>
+				</content>
+			</Panel>
+		</l:content>
+	</l:ResponsiveFlowLayout>
+</mvc:View>
